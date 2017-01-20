@@ -1,7 +1,5 @@
 - name: install redis
-  yum:
-    name: redis30u
-    state: installed
+  yum: name=redis30u
 
 - name: disable default redis service
   service:
