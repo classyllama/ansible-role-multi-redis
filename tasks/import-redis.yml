@@ -1,0 +1,27 @@
+- name: import {{ name }} config
+  copy:
+    src: etc/redis/{{ name }}.conf
+    dest: /etc/redis/{{ name }}.conf
+    owner: root
+    group: root
+    mode: 0644
+- name: import init.d/{{ name }}
+  copy:
+    src: etc/init.d/{{ name }}
+    dest: /etc/init.d/{{ name }}
+    owner: root
+    group: root
+    mode: 0755
+- name: creating data dir for {{ name }}
+  file:
+    path: "{{ data_dir }}"
+    state: directory
+    owner: redis
+    group: redis
+    mode: 0700
+- name: starting {{ name }} service
+  service:
+    name: "{{ name }}"
+    enabled: yes
+    state: started
+    use: service      # use old SysV service manager (neccesary on RHEL 7 until converted to systemd service scripts)
