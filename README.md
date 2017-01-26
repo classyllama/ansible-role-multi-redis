@@ -8,13 +8,13 @@
 
 * Prod triple-redis setup:
 
-        - { name: redis, redis_instance: { name: obj, port: 6379 }}
-        - { name: redis, redis_instance: { name: fpc, port: 6381 }}
-        - { name: redis, redis_instance: { name: ses, port: 6380, save: yes }}
+        - { role: redis, redis_instance: { name: obj, port: 6379 }}
+        - { role: redis, redis_instance: { name: fpc, port: 6381 }}
+        - { role: redis, redis_instance: { name: ses, port: 6380, save: yes }}
 
 * Stage triple-redis setup:
 
-        - { name: redis, redis_instance: { name: stage-obj, port: 6389 }}
-        - { name: redis, redis_instance: { name: stage-fpc, port: 6391 }}
-        - { name: redis, redis_instance: { name: stage-ses, port: 6390, save: yes }}
+        - { role: redis, redis_instance: { name: stage-obj, port: 6389 }}
+        - { role: redis, redis_instance: { name: stage-fpc, port: 6391 }}
+        - { role: redis, redis_instance: { name: stage-ses, port: 6390, save: yes }}
 
