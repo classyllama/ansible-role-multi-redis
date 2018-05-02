@@ -7,9 +7,6 @@
     group: root
     mode: "{{ item.mode }}"
   with_items:
-    - src: redis/redis-base.conf
-      dest: /etc/redis/redis-base.conf
-      mode: "0644"
     - src: redis/redis.conf
       dest: /etc/redis/redis-{{ redis_instance.name }}.conf
       mode: "0644"
