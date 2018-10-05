@@ -8,7 +8,7 @@ redis_enablerepo:
 redis_instance:
   name: obj
   port: 6379
-  save: no
+  save: false
 
 redis_maxmemory: 1gb
 
