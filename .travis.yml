@@ -11,8 +11,6 @@ env:
     - MOLECULE_DISTRO: centos7
       MOLECULE_DOCKER_COMMAND: /usr/lib/systemd/systemd
 
-    - MOLECULE_DISTRO: centos6
-
 install:
   - pip install 'ansible==2.6.*'
   - pip install molecule docker
