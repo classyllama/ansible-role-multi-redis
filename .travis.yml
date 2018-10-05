@@ -14,6 +14,7 @@ env:
     - MOLECULE_DISTRO: centos6
 
 install:
+  - pip install 'ansible==2.6.*'
   - pip install molecule docker
 
 before_script:
