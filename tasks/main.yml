@@ -38,8 +38,9 @@
   notify: restart redis
 
 # Set a fact, so if this changes in one instance of this role, all instances of redis will be registered for restart
-- set_fact: redis_base_config_changed=yes
-  when: redis_config_changed_base.changed
+- name: identify changed base configuration
+  set_fact: redis_base_config_changed=yes
+  when: redis_config_changed_base is changed
 
 - include_tasks: configure-el{{ ansible_distribution_major_version }}.yml
 
