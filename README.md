@@ -22,6 +22,13 @@ See `defaults/main.yml` for complete list of variables available to customize th
 
 * `davidalger.repo_ius`
 
+## Redis 5.0 Support
+
+This role will, when configured correctly, deploy Redis 5.0 succesfully:
+
+    redis_version: 50               # Must have two digits in version for proper systemd setup
+    redis_package_name: redis5      # There is no 'u' suffix on the package name for Redis 5
+
 ## Example Playbook
 
 * Production triple-redis deployment:
