@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - davidalger.repo_ius
+  - { role: davidalger.repo_ius, when: not redis_do_not_use_ius_repo|default(false) }
 
 galaxy_info:
   role_name: multi_redis
