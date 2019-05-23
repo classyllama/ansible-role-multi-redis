@@ -20,7 +20,7 @@ See `defaults/main.yml` for complete list of variables available to customize th
 
 ## Dependencies
 
-* `davidalger.repo_ius`
+* `classyllama.repo_ius`
 
 ## Redis 5.0 Support
 

@@ -4,4 +4,4 @@
   become: true
 
   roles:
-    - role: davidalger.multi_redis
+    - role: classyllama.multi_redis
